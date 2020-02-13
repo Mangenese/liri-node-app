@@ -44,3 +44,41 @@ function concertThis() {
 
 
 }
+function spotifyThis() {
+    spotify.search({type: 'track',query: userInput,})
+    .then(function(response){
+        var data= (response.tracks.items)
+
+        for (var i = 0; i < data.length; i++){
+            console.log(data[i].album.artists[0].name)
+            console.log(data[i].name)
+            console.log(data[i].preview_url)
+            console.log(data[i].album.name)
+            console.log("\n____________________________\n")
+        }
+    
+  })
+  .catch(function (err) {
+      console.log("Error encountered: " + err);
+  });
+       
+    
+}
+
+function movieThis() {
+    var queryUrl = "http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=trilogy"
+    axios.get(queryUrl).then(
+        function(response) {
+            var data = response.data
+            console.log("Title: " + data.title);
+            console.log("Release year: " + data.Year);
+            console.log("IMBD rating: " + data.imbdRating);
+            console.log("Rotten Tomatoes Rating: " + data.Ratings[1].Value);
+            console.log("Country: " + data.Country);
+            console.log("Language: " + data.Language);
+            console.log("Plot: " + data.Plot);
+            console.log("Actors: " + data.Actors);
+            console.log("\n________________________________\n")
+        }
+    )
+}
