@@ -82,3 +82,34 @@ function movieThis() {
         }
     )
 }
+
+function doWhatItSays() {
+    fs.readFile("random.txt", "utf8", function (error, data) {
+        if (error) {
+            return console.log(error);
+        }
+        var dataArray = data.split(", ");
+        liriComm = dataArray[0];
+        userInput = dataArray[1];
+        menu()
+    })
+}
+
+function menu() {
+    switch (liriComm) {
+        case 'concert-this':
+            concertThis();
+            break;
+        case 'spotify-this-song' :
+            spotifyThis();
+            break;
+        case 'movie-this': 
+            movieThis();
+            break;
+        case 'do-what-it-says':
+            doWhatItSays();
+            break;
+    }
+}
+
+menu();
