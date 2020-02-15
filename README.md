@@ -14,8 +14,8 @@ SPOTIFY_SECRET=your-spotify-secret
 
 
 To use the app make sure you type in the terminal: 
-    node liri.js concert-this USER-INPUT-GO-HERE
-    node liri.js spotify-this-song USER-INPUT-GO-HERE
-    node liri.js movie-this USER-INPUT-GO-HERE
-    node liri.js do-what-it-says USER-INPUT-GO-HERE
+    *node liri.js concert-this USER-INPUT-GO-HERE
+    *node liri.js spotify-this-song USER-INPUT-GO-HERE
+    *node liri.js movie-this USER-INPUT-GO-HERE
+    *node liri.js do-what-it-says USER-INPUT-GO-HERE
 
