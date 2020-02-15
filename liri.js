@@ -34,8 +34,9 @@ function concertThis() {
     axios.get(queryUrl).then(function(response){
         var data= response.data
         for (var i = 0; i < data.length; i++){
+            var data= response.data
             var venueName = data[i].venue.name;
-            var venueLocation = data[i].venue.city + ", " + venue.country
+            var venueLocation = data[i].venue.city 
             var date = data[i].datetime
             console.log(venueName + " \n"+ venueLocation + " \n" + moment(date).format("MM/DD/YYY"))
             console.log("_______________________\n")
@@ -88,13 +89,14 @@ function doWhatItSays() {
         if (error) {
             return console.log(error);
         }
-        var dataArray = data.split(", ");
-        liriComm = dataArray[0];
-        userInput = dataArray[1];
+        var dataArr = data.split(",");
+        liriComm = dataArr[0];
+        // console.log(liriComm)
+        userInput = dataArr[1];
+        // console.log(userInput)
         menu()
     })
 }
-
 function menu() {
     switch (liriComm) {
         case 'concert-this':
