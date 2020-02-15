@@ -19,3 +19,9 @@ To use the app make sure you type in the terminal:
     *node liri.js movie-this USER-INPUT-GO-HERE
     *node liri.js do-what-it-says USER-INPUT-GO-HERE
 
+### The following terminal should show this: 
+
+![concert-this](/images/concert-this.PNG)
+![spotify-this-song](/images/spotify-this-song.PNG)
+![movie-this](/images/movie-this.PNG)
+![do-what-it-says](/images/do-what-it-says.PNG)

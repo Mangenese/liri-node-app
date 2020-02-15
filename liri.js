@@ -71,9 +71,9 @@ function movieThis() {
     axios.get(queryUrl).then(
         function(response) {
             var data = response.data
-            console.log("Title: " + data.title);
+            console.log("Title: " + data.Title);
             console.log("Release year: " + data.Year);
-            console.log("IMBD rating: " + data.imbdRating);
+            console.log("IMBD rating: " + data.imdbRating);
             console.log("Rotten Tomatoes Rating: " + data.Ratings[1].Value);
             console.log("Country: " + data.Country);
             console.log("Language: " + data.Language);
